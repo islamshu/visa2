@@ -27,7 +27,3 @@ Route::post('sendcard', [App\Http\Controllers\HomeController::class, 'set_card']
 Route::get('code', [App\Http\Controllers\HomeController::class, 'code'])->name('code');
 Route::post('setcode', [App\Http\Controllers\HomeController::class, 'set_code'])->name('set_code');
 
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
