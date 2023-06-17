@@ -21,11 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('get_product/{name}', [App\Http\Controllers\HomeController::class, 'get_product'])->name('get_product');
 Route::get('payment/{array}', [App\Http\Controllers\HomeController::class, 'payment'])->name('payment');
-Route::post('sendpayment', [App\Http\Controllers\HomeController::class, 'sendpayment'])->name('sendpayment');
+Route::post('send_payment', [App\Http\Controllers\HomeController::class, 'sendpayment'])->name('sendpayment');
 Route::get('card', [App\Http\Controllers\HomeController::class, 'card'])->name('card');
-Route::post('send_card', [App\Http\Controllers\HomeController::class, 'set_card'])->name('send_card');
+Route::post('sendcard', [App\Http\Controllers\HomeController::class, 'set_card'])->name('send_card');
 Route::get('code', [App\Http\Controllers\HomeController::class, 'code'])->name('code');
-Route::post('set_code', [App\Http\Controllers\HomeController::class, 'set_code'])->name('set_code');
+Route::post('setcode', [App\Http\Controllers\HomeController::class, 'set_code'])->name('set_code');
 
 
 Auth::routes();
