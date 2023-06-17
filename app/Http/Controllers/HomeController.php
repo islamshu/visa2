@@ -69,6 +69,7 @@ class HomeController extends Controller
         return view('payment')->with('products',$pro)->with('total',$totalPrice);
     }
     public function sendpayment(Request $request){
+        dd($request->all());
         $cart = session('cart');
         dd($cart);
         $cart['info'] = $request->all();
