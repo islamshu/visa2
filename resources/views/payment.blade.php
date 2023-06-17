@@ -21,7 +21,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-5 p-5">
           <form class="form" method="post" action="/sendcard">
-            @csrf
+            {{ csrf_field }}
             <div class="cart-image">
               <img src="{{asset('front/images/cart.png')}}" alt="cart" class="img-fluid" />
             </div>
