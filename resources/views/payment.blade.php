@@ -21,7 +21,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-5 p-5">
           <form class="form" method="post" action="{{ route('sendpayment') }}">
-            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <div class="cart-image">
               <img src="{{asset('front/images/cart.png')}}" alt="cart" class="img-fluid" />
             </div>
