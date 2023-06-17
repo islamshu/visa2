@@ -70,6 +70,7 @@ class HomeController extends Controller
         $cart = session('cart');
         
         $cart['info'] = $request->all();
+        dd($request);
         session(['cart' => $cart]);
         return redirect()->route('card');
 
