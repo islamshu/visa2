@@ -48,7 +48,7 @@ class HomeController extends Controller
         // return view('home???');
     }
     public function payment($array){
-        session()->forget('cart');
+        // session()->forget('cart');
         $products = explode(',',$array);
         $pro =[];
         foreach($products as $key=>$prod){
