@@ -62,6 +62,9 @@ class HomeController extends Controller
         $data['products'] = $pro;
         $data['total']= $totalPrice;
         session(['cart' => $data]);
+        $cart = session('cart');
+
+        dd($cart);
 
 
         return view('payment')->with('products',$pro)->with('total',$totalPrice);
