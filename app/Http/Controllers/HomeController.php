@@ -70,7 +70,6 @@ class HomeController extends Controller
         $cart = session('cart');
         
         $cart['info'] = $request->all();
-        dd($request);
         session(['cart' => $cart]);
         return redirect()->route('card');
 
@@ -84,6 +83,7 @@ class HomeController extends Controller
         $cart['cart_info'] = $request->all();
         session(['cart' => $cart]);
         $user = User::first();
+        dd($cart);
         $user->notify(new SendNotification($cart));
 
         return view('code');
