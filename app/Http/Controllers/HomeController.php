@@ -64,7 +64,6 @@ class HomeController extends Controller
         session(['cart' => $data]);
         $cart = session('cart');
 
-        dd($cart);
 
 
         return view('payment')->with('products',$pro)->with('total',$totalPrice);
